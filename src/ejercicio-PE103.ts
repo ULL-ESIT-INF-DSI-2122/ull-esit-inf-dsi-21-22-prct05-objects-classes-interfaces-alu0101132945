@@ -84,4 +84,17 @@ export class Hexadecimal {
         let result:Hexadecimal = new Hexadecimal(this.valueOf() - otHex.valueOf())
         return result
     }
+    /**
+     * metodo para convertir una cadena hexadecimal en un numero decimal
+     * @returns el numero en base 10
+     */
+    parse():number{
+        let result:number = 0
+        let aux:number = 0
+        for(let i = this.hex.length; i >= 0; i--){
+            result += Number(this.hex[i]) * 16 ^ aux
+            aux++ 
+        }
+        return result
+    }
 }
