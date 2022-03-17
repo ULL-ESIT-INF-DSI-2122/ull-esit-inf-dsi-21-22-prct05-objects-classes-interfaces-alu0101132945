@@ -66,9 +66,22 @@ export class Hexadecimal {
     toString():String{
         return this.hex
     }
-
+    /**
+     * metodo que suma dos hexadecimales
+     * @param otHex el otro hexadecimal que se va a sumar al numero
+     * @returns el resultado de la suma en un nuevo hexadecimal
+     */
     add(otHex:Hexadecimal):Hexadecimal {
         let result:Hexadecimal = new Hexadecimal(this.valueOf() + otHex.valueOf())
+        return result
+    }
+    /**
+     * metodo que resta dos hexadecimales
+     * @param otHex el otro hexadecimal que se va a restar al numero
+     * @returns el resultado de la resta en un nuevo hexadecimal
+     */
+    substract(otHex:Hexadecimal):Hexadecimal {
+        let result:Hexadecimal = new Hexadecimal(this.valueOf() - otHex.valueOf())
         return result
     }
 }

@@ -22,4 +22,7 @@ describe('ej-PE103 class tests', () => {
   it('substract() works', () => {
     expect(oneHexadecimal.substract(twoHexadecimal).toString()).to.be.equal('0x26');
   });
+  it('parse() works', () => {
+    expect(testHexadecimal.parse()).to.be.equal(38);
+  });
 });
