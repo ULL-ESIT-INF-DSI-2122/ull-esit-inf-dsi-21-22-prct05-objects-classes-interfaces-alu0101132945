@@ -14,6 +14,6 @@ describe('ej-PE103 class tests', () => {
     expect(testHexadecimal.toString()).to.be.equal('0x26');
   });
   it('valueOf() works', () => {
-    expect(testHexadecimal.toString()).to.be.equal(38);
+    expect(testHexadecimal.valueOf()).to.be.equal(38);
   });
 });
