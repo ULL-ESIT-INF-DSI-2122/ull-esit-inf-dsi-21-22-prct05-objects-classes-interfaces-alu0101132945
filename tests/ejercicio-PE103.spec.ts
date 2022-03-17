@@ -16,4 +16,7 @@ describe('ej-PE103 class tests', () => {
   it('valueOf() works', () => {
     expect(testHexadecimal.valueOf()).to.be.equal(38);
   });
+  it('add() works', () => {
+    expect(oneHexadecimal.add(twoHexadecimal).valueOf()).to.be.equal(38);
+  });
 });

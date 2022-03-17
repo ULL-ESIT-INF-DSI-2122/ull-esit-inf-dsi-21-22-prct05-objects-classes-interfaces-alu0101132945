@@ -66,4 +66,9 @@ export class Hexadecimal {
     toString():String{
         return this.hex
     }
+
+    add(otHex:Hexadecimal):Hexadecimal {
+        let result:Hexadecimal = new Hexadecimal(this.valueOf() + otHex.valueOf())
+        return result
+    }
 }
