@@ -2,7 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Pokemon} from '../src/ejercicio-1/Pokemon';
 import {Pokedex} from '../src/ejercicio-1/Pokedex';
-//import {Combat} from '../src/ejercicio1/combat';
+import {Combat} from '../src/ejercicio1/combat';
 
 describe('ej-1 classes tests', () => {
   let Venusaur: Pokemon = new Pokemon("Venusaur",3,2,100,80,82,83,80,"Planta","Veneno")
@@ -14,7 +14,11 @@ describe('ej-1 classes tests', () => {
   });
 
   it('Pokedex search works', () => {
-    expect(Pokedex1.search("Venusaur")).to.not.equal("Venusaur,2,100,Planta,Veneno,80,82,83,80");
+    expect(Pokedex1.search("Venusaur")).to.be.equal("Venusaur,2,100,Planta,Veneno,80,82,83,80");
+  });
+
+  it('Combat is created', () => {
+    expect(Combat1).to.not.equal(null);
   });
   // it('Pokedex add works', () => {
   //   let Pidgeot: Pokemon = new Pokemon("Pidgeot",1.5,39.5,83,80,75,101,"Normal","Volador")
