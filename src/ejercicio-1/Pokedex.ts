@@ -9,6 +9,14 @@ export class Pokedex{
         });
     }
 
-    
+    search(pokemon:string):string{
+        let result: string = ""
+        this.pokedex.forEach(poke => {
+            if(poke.nam() == pokemon){
+                return result = poke.nam() +',' +poke.alt() +',' +poke.pes() +',' +poke.tipo() +',' +poke.hp() +',' +poke.attack() +',' +poke.defense() +',' +poke.speed() 
+            }
+        });
+        return result
+    }
 
 }

@@ -8,9 +8,9 @@ export class Pokemon{
     protected HP: number;
     protected atck: number;
     protected def: number;
-    protected vel: number;
+    protected spe: number;
 
-    constructor(na:string,nu:number,he:number,we:number,hp:number,at:number,de:number,ve:number,t1:string,t2?:string){
+    constructor(na:string,nu:number,he:number,we:number,hp:number,at:number,de:number,sp:number,t1:string,t2?:string){
         this.name = na
         this.num = nu
         this.height = he
@@ -22,7 +22,48 @@ export class Pokemon{
         this.HP = hp
         this.atck = at
         this.def = de
-        this.vel = ve
+        this.spe = sp
+    }
+
+    nam():string{
+        return this.name
+    }
+
+    natnum():number{
+        return this.num
+    }
+
+    alt():number{
+        return this.height
+    }
+
+    pes():number{
+        return this.weight
+    }
+
+    tipo():string{
+        let result:string = this.type[0]
+        if(this.type.length == 2){
+            result += ','
+            result += this.type[1]
+        }
+        return result
+    }
+
+    hp():number{
+        return this.HP
+    }
+
+    attack():number{
+        return this.atck
+    }
+
+    defense():number{
+        return this.def
+    }
+
+    speed():number{
+        return this.spe
     }
 
 }
