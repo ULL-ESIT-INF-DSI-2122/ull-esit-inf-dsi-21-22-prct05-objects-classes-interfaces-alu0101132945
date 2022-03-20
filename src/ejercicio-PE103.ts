@@ -56,6 +56,7 @@ export class Hexadecimal {
             result += Number(this.hex[i]) * 16 ^ aux
             aux++ 
         }
+        
         return result
     }
 }
