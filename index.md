@@ -2,7 +2,7 @@
 ## Ejercicio 1
 En este ejercicio, las clases creadas son tres: __Pokemon__, __Pokedex__ y __Combat__:
 
--   La clase ```Pokemon``` sirve para almacenar un pokemon y toda su información, ademas tiene una serie de metodos que permite que otras clases ajenas a ella utilice esta información:
+-   La clase ```Pokemon``` sirve para almacenar un pokemon y toda su información, ademas tiene una serie de metodos que permite que otras clases ajenas a ella utilice esta información guardada por la clase:
 
 ```typescript
 export class Pokemon{
@@ -102,9 +102,9 @@ export class Pokedex{
 }
 ```
 
-Esta clase utiliza la clase pokemon descrita previamente para guardar toda la información de un pokemon y que despues esta pueda simplemente mostrarla.
+Esta clase utiliza la clase ```Pokemon``` descrita previamente para guardar toda la información de un pokemon y que despues esta pueda simplemente mostrarla.
 
--   Por ultimo la clase combate simula un combate entre dos pokemon, utilizando sus estadisticas _(HP,Ataque,Defensa y Velocidad)_ comprueba que pokemon sera el primero en atacar, y posteriormente calcula el daño que recibe cada pokemon y cuanta salud le queda a ambos, el metodo start se detiene cuando la salud de uno de los dos pokemon llega a 0 y devuelve quien ha ganado:
+-   Por ultimo la clase ```Combat``` simula un combate entre dos pokemon, utilizando sus estadisticas _(HP,Ataque,Defensa y Velocidad)_ comprueba que pokemon sera el primero en atacar, y posteriormente calcula el daño que recibe cada pokemon y cuanta salud le queda a ambos, el metodo start se detiene cuando la salud de uno de los dos pokemon llega a 0 y devuelve quien ha ganado:
 
 ```typescript
 export class Combat{
@@ -188,3 +188,4 @@ export class Combat{
     
 }
 ```
+En esta clase la efectividad se guarda en un array de superefectivos y asi se comprueba la efectividad del ataque de un pokemon a la hora de calcular el daño con el metodo ```damageCalculator()```, a este metodo ademas se le tiene que indicar cuales son los pokemon que intervienen, para moder manejar facilmente quien ataca primero en el metodo ```start()```.
